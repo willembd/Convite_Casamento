@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <title>Carlos&Ítala</title>
+</head>
+<body>
+    <main class="card">
+        <section class="section-1">
+            <img class="img-1" src="img/img-1 (3).png" alt="">
+            <div class="texto-1">
+                <p class="texto-p">“O Senhor seja entre mim e ti, e entre a minha semente e a tua semente, seja perpetuamente.”</p>
+                <p class="texto-p">1Samuel 20:42</p>
+            </div>
+        </section>
+        <section class="section-2">
+            <div class="texto-2">
+                <h1 class="nomes">Carlos & Ítala</h1>
+                <p class="texto-p">Com a Benção de Deus...</p>
+                
+            </div>
+            <img src="img/img-1 (1).png" alt="">
+            
+        </section>
+        <section class="section-3">
+            <div class="texto-3">
+                 <p class="frase2">Com muita alegria, convidamos você para compartilhar um momento especial em nossas vidas.</p>
+            </div>
+            <div class="informacao">
+                <div>
+                    <p><b>Local:</b> Rua Lápis Lazúli, 260 – Jardim Atlântico, Olinda</p>
+                </div>
+                <div>
+                    <p><b>Horário:</b> 18h30</p>
+                </div>
+            </div>
+            <img class="img-calendario" src="img/calendario.jpeg" alt="">
+        </section>
+
+        <section class="section-4">
+            <div class="local">
+                <a id="mapsLink" href="#" target="_blank" rel="noopener">Abrir local no Google Maps</a>
+            </div>
+            <div class="presente">
+                <p>Presente Pix</p>
+                <p id="copiaTexto">ccarlosaschoff@gmail</p>
+            </div>
+        </section>
+        
+        
+    </main>
+    <script>
+        const endereco = 'Rua Lápis Lazúli, 260, Jardim Atlântico, Olinda';
+        const maps = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(endereco)}`;
+        document.getElementById('mapsLink').href = maps;
+
+        const texto = document.getElementById("copiaTexto");
+
+        texto.addEventListener("click", () => {
+        navigator.clipboard.writeText(texto.textContent).then(() => {
+            alert("Texto copiado: " + texto.textContent);
+        });
+        });
+    </script>
+    
+</body>
+</html>

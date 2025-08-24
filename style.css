@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+   
+}
+body{
+    background-color: #F7F5F0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.section-1{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card{
+    width: min(960px, 100%);
+    background-color: rgba(255,255,255,.8);
+    border-radius:24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    padding:28px 20px;
+    position:relative;
+}
+
+img{
+    width: 180px;
+}
+
+.texto-1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.texto-p{
+    font-family:  Segoe UI, Roboto, Arial, sans-serif;
+    font-size: 1.4rem;
+    color: #374151;
+}
+
+.section-2{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 68px;
+   
+}
+.texto-2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.nomes{
+    font-family:"Playfair Display", Georgia, serif;
+    font-size:clamp(36px, 6vw, 60px);
+    color: #2F3B2F;
+
+}
+
+.section-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+}
+.informacao{
+    display: flex;
+    gap: 20px;
+}
+
+.informacao div{
+     display:inline-flex; 
+    flex-direction: column;
+    align-items:center; 
+    padding:10px 14px; 
+    border-radius:14px; 
+    background: rgba(236, 241, 235, 0.8); 
+    box-shadow: 0 2px 20px rgba(101, 146, 95, 0.5);
+}
+
+.informacao b ,p{
+    font-family:  Segoe UI, Roboto, Arial, sans-serif;
+    color: #22252b;
+}
+
+.frase2{
+    font-family:  Segoe UI, Roboto, Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #374151;
+    text-align: center;
+}
+.img-calendario{
+    width: 360px;
+}
+
+.section-4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.local,
+.presente {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 18px;
+  border-radius: 14px;
+  background: rgba(101, 146, 95, 0.85);
+  box-shadow: 0 6px 18px rgba(101, 146, 95, 0.4);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.local:hover,
+.presente:hover {
+  transform: scale(1.05);
+  background: rgba(101, 146, 95, 1);
+}
+.local a {
+    font-family: Segoe UI, Roboto, Arial, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+.presente p {
+  margin-bottom: 8px;
+  color: #fff;
+  font-weight: 600;
+}
+.presente button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+}
+.presente button:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 500px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    img{
+        width: 80px;
+    }
+    .texto-p{
+        font-size: 0.9rem;
+    }
+    .section-2{
+        gap: 5px;
+    }
+    .frase2{
+        font-size: .8rem;
+    }
+    .informacao p{
+        font-size: .8rem;
+    }
+    .img-calendario{
+        width: 300px;
+    }
+    .section-4{
+        gap: 20px;
+    }
+    .local a{
+        font-size: .8rem;
+    }
+    .presente p{
+        font-size: .8rem;
+    }
+}
+@media (max-width: 400px) {
+    .nomes{
+            font-size: clamp(30px, 6vw, 60px);
+    }
+}
